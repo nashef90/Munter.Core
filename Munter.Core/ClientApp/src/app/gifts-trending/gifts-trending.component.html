@@ -1,0 +1,11 @@
+<div *ngIf="images.length===0">Loading ...</div>
+<div class="card-columns" *ngIf="images.length!==0">
+    <div class="card" *ngFor="let item of images">
+        <img class="card-img-top" [src]="item.url" [alt]="item.name" />
+        <div class="card-body">
+            <p class="card-text">
+                <small class="text-muted">{{ item.name }}</small>
+            </p>
+        </div>
+    </div>
+</div>
